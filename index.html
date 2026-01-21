@@ -482,6 +482,12 @@
             color: var(--apple-gray);
             font-size: 14px;
         }
+
+		.form-hint {
+  			margin-top: 16px;
+  			font-size: 14px;
+  			opacity: 0.8;
+		}
         
         /* Responsive Design */
         @media (max-width: 1024px) {
@@ -741,8 +747,8 @@
     <section class="parallax-section" id="certificates">
         <div class="parallax-bg"></div>
         <div class="section-header">
-            <h2>Arbeitszeugnisse</h2>
-            <p>Ausgewählte Referenzen und Qualifikationsnachweise</p>
+            <h2>Nachweise</h2>
+            <p>Arbeitszeugnisse und Zertifikate</p>
         </div>
         <div class="certificates">
             <div class="certificate">
@@ -750,21 +756,28 @@
                     <i class="fas fa-award fa-3x" style="color: white;"></i>
                 </div>
                 <div class="certificate-content">
-                    <h3>UX Design Zertifizierung</h3>
-                    <p>NN/g UX Certification</p>
-                    <p>Erworben: Mai 2020</p>
-                    <p>Bereiche: UX Research, Interaction Design, Usability Testing</p>
-                </div>
+        			<h3>Arbeitszeugnis</h3>
+        			<p>apro.gmbh</p>
+        			<p>Rollen: Cybersecurity / PreSales / Projektmanagement</p>
+        			<p>
+          				<a href="/docs/arbeitszeugnis.pdf" target="_blank" rel="noopener">
+            				PDF öffnen
+          				</a>
+        			</p>
+      			</div>
             </div>
             <div class="certificate">
                 <div class="certificate-img">
                     <i class="fas fa-graduation-cap fa-3x" style="color: white;"></i>
                 </div>
                 <div class="certificate-content">
-                    <h3>Frontend Entwicklung</h3>
-                    <p>Advanced JavaScript Spezialisierung</p>
-                    <p>Erworben: August 2019</p>
-                    <p>Bereiche: Modernes JS, React, Performance</p>
+                    <h3>Lebenslauf</h3>
+                    <p>Aktuelle Version als PDF</p>
+        			<p>
+          				<a href="/docs/lebenslauf.pdf" target="_blank" rel="noopener">
+            				PDF öffnen
+          				</a>
+        			</p>
                 </div>
             </div>
             <div class="certificate">
@@ -772,12 +785,33 @@
                     <i class="fas fa-medal fa-3x" style="color: white;"></i>
                 </div>
                 <div class="certificate-content">
-                    <h3>Design Leadership</h3>
-                    <p>Design Management Workshop</p>
-                    <p>Erworben: Februar 2021</p>
-                    <p>Bereiche: Teamführung, Strategie, Stakeholder-Management</p>
-                </div>
+        			<h3>Certified genugate Specialist</h3>
+        			<p>genua GmbH | Firewall genugate (GG 10.5)</p>
+        			<p>Erworben: 04.09.2023</p>
+        			<p>HA-Systeme, VPN (DMZ), Troubleshooting, Disaster Recovery</p>
+        			<p>
+          				<a href="/docs/genugate_zertifikat.pdf" target="_blank" rel="noopener">
+            				Zertifikat ansehen
+          				</a>
+        			</p>
+      			</div>
             </div>
+			<div class="certificate">
+      			<div class="certificate-img">
+        			<i class="fas fa-bullhorn fa-3x" style="color: white;"></i>
+      			</div>
+      			<div class="certificate-content">
+        			<h3>Grundlagen des Onlinemarketings</h3>
+        			<p>Google Zukunftswerkstatt</p>
+        			<p>Erworben: 30.01.2022</p>
+        			<p>Online-Marketing, digitale Grundlagen, Analyse</p>
+        			<p>
+          				<a href="/docs/online_marketing_google.pdf" target="_blank" rel="noopener">
+            				Zertifikat ansehen
+          				</a>
+        			</p>
+      			</div>
+    		</div>
         </div>
     </section>
 
@@ -785,7 +819,7 @@
     <section class="section" id="contact">
         <div class="section-header">
             <h2>Kontakt</h2>
-            <p>Treten Sie mit mir in Verbindung für Zusammenarbeit</p>
+            <p>Schreiben Sie mir gern direkt. Ich melde mich zeitnah zurück.</p>
         </div>
         <div class="contact-container">
             <div class="contact-info">
@@ -796,29 +830,37 @@
                     <p><i class="fas fa-map-marker-alt"></i> Erfurt, Deutschland</p>
                 </div>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-dribbble"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-behance"></i></a>
+                    <a href="https://www.linkedin.com/in/marvin-kirchner/"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
             <div class="contact-form">
                 <h3>Nachricht senden</h3>
-                <form>
+                <form action="https://api.web3forms.com/submit" method="POST">
+        <!-- WICHTIG -->
+        			<input type="hidden" name="access_key" value="DEIN_ACCESS_KEY">
+
+        <!-- optional -->
+        			<input type="hidden" name="subject" value="Kontakt über mkirchner-cv.de">
+        			<input type="hidden" name="from_name" value="Website Kontaktformular">
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" id="name" required>
+                        <input type="text" id="name" name="name" required>
                     </div>
                     <div class="form-group">
                         <label for="email">E-Mail</label>
-                        <input type="email" id="email" required>
+                        <input type="email" id="email" name="email" required>
                     </div>
                     <div class="form-group">
                         <label for="message">Nachricht</label>
-                        <textarea id="message" rows="5" required></textarea>
+                        <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
+		<!-- Honeypot gegen Spam -->
+        			<input type="checkbox" name="botcheck" style="display:none">
                     <button type="submit" class="submit-btn">Senden</button>
                 </form>
+					<p class="form-hint">
+        				Alternativ: <a href="mailto:m.krchnr47@gmail.com">E-Mail senden</a>
+      				</p>
             </div>
         </div>
     </section>
@@ -829,9 +871,6 @@
             <p>Vielen Dank für Ihren Besuch. Ich freue mich darauf, von Ihnen zu hören und gemeinsam an spannenden Projekten zu arbeiten.</p>
             <div class="social-links">
                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-dribbble"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-behance"></i></a>
             </div>
             <p class="copyright">© 2026 Marvin Kirchner. Alle Rechte vorbehalten.</p>
         </div>
@@ -988,3 +1027,4 @@
 </body>
 
 </html>
+
