@@ -254,20 +254,22 @@
         
         /* Parallax Section */
         .parallax-section {
-            min-height: 100vh;
+            min-height: auto;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
-            overflow: hidden;
+            overflow: visble;
+			padding: 120px 10% 80px;
         }
         
         .parallax-bg {
             position: absolute;
+			inset 0;
             top: 0;
             left: 0;
             width: 100%;
-            height: 150%;
+            height: 100%;
             background: linear-gradient(45deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
             opacity: 0.1;
             z-index: -1;
@@ -289,14 +291,16 @@
         
         .certificate {
             width: 280px;
-            height: 380px;
+            height: auto;
             background: white;
             border-radius: 18px;
-            overflow: hidden;
+            overflow: visible;
             box-shadow: 0 15px 35px rgba(0,0,0,0.1);
             transition: all 0.4s ease;
             opacity: 0;
             transform: translateY(40px);
+			display: flex;
+			flex-direction: column;
         }
         
         .dark-mode .certificate {
@@ -318,7 +322,13 @@
         
         .certificate-content {
             padding: 25px;
+			flex: 1;
         }
+
+		.certificate-content a {
+  			display: inline-block;
+  			margin-top: 10px;
+		}
         
         .certificate h3 {
             font-size: 22px;
@@ -1027,5 +1037,6 @@
 </body>
 
 </html>
+
 
 
