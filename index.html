@@ -118,7 +118,7 @@
   			margin: 24px auto 18px;
   			width: 200px;
   			height: 200px;
- 	 		border-radius: 24px;
+ 	 		border-radius: 50%;
   			overflow: hidden;
   			box-shadow: 0 20px 40px rgba(0,0,0,0.12);
 		}
@@ -159,14 +159,23 @@
             transform: translateY(30px);
         }
         
-        .hero p {
-            font-size: 24px;
-            max-width: 700px;
-            margin-bottom: 40px;
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        
+		.hero .hero-title {
+ 	 		font-size: 24px;
+  			max-width: 700px;
+  			margin-bottom: 24px;
+  			opacity: 0;
+  			transform: translateY(30px);
+		}
+
+		.hero .hero-subline {
+  			margin-top: 16px;
+  			font-size: 18px;
+  			color: var(--apple-gray);
+  			max-width: 700px;
+  			opacity: 0;
+  			transform: translateY(30px);
+		}
+
         .scroll-down {
             position: absolute;
             bottom: 40px;
@@ -619,7 +628,7 @@
         <h1>Marvin Kirchner</h1>
         <p>IT-Projektmanagement | PreSales | Cybersecurity</p>
 		<div class="hero-portrait">
-    		<img src="/images/marvin-kirchner-portrait-color.jpg" alt="Marvin Kirchner – IT-Projektmanager">
+    		<img src="/images/marvin-kirchner-portait-color.jpg" alt="Marvin Kirchner – IT-Projektmanager">
   		</div>
 		<p class="hero-subline">Strukturierter IT-Projektmanager mit technischer Tiefe und Erfahrung in sicherheitskritischen Umgebungen.</p>
         <div class="scroll-down">
@@ -1086,6 +1095,7 @@
 </body>
 
 </html>
+
 
 
 
