@@ -300,6 +300,13 @@
 
 
 		/* Grid Styles Section */
+		.about-grid{
+  			grid-template-columns: 1fr;
+			max-width: 900px;
+  			margin-left: auto;
+  			margin-right: auto;
+		}
+		
 		.about-layout{
   			display: grid;
   			grid-template-columns: 360px 1fr;
@@ -365,16 +372,18 @@
         }
         
         .certificates {
-            display: flex;
+            display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             flex-wrap: wrap;
             justify-content: center;
-            gap: 30px;
+            gap: 40px;
             max-width: 1200px;
             margin: 0 auto;
+			margin-top: 40px;
         }
         
         .certificate {
-            width: 280px;
+            width: 100%;
             height: auto;
 			min-height: 380px;
             background: white;
@@ -712,7 +721,7 @@
     			<div class="about-photo">
       				<img src="images/marvin-kirchner-about.jpg" alt="Marvin Kirchner Portrait" loading="lazy">
     			</div>
-        	<div class="content-grid">
+        	<div class="content-grid about-grid">
             <div class="card">
             	<h3>Mein Weg: Vom Handwerk zur IT</h3>
       		<p>
@@ -1151,6 +1160,7 @@
 </body>
 
 </html>
+
 
 
 
