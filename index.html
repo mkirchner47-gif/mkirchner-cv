@@ -218,6 +218,11 @@
             flex-direction: column;
             position: relative;
             overflow: visible;
+			background: radial-gradient(
+    			800px circle at center,
+    			rgba(173, 216, 230, 0.08),
+    			transparent 60%
+  			);
         }
 
 		.section i {
@@ -246,6 +251,14 @@
             transform: translateY(20px);
 			color: #111827; /* sehr dunkles Grau statt Verlauf */
         }
+
+		.dark-mode .section {
+  			background: radial-gradient(
+    		800px circle at center,
+    		rgba(99, 102, 241, 0.08),
+    		transparent 60%
+  			);
+		}
 
 		.dark-mode .section-header h2 {
   			color: #f3f4f6;
@@ -1262,6 +1275,7 @@
 </body>
 
 </html>
+
 
 
 
