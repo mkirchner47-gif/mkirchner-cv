@@ -17,8 +17,14 @@
             --gradient-end: #22c55e;
         }
 
-		a { color: var(--apple-blue); }
-		a:hover { opacity: 0.85; }
+		a { color: var(--apple-blue); 
+			font-weight: 500;
+  			text-decoration: none;
+		}
+		
+		a:hover { 	opacity: 0.85; 
+					text-decoration: underline;
+		}
 		
         * {
             margin: 0;
@@ -39,6 +45,18 @@
             background-color: var(--apple-dark);
             color: #f5f5f7;
         }
+
+		.certificate,
+		.skill,
+		.experience-card {
+  			background: #ffffff;
+		}
+
+		.dark-mode .certificate,
+		.dark-mode .skill,
+		.dark-mode .experience-card {
+  			background: #111827;
+		}
         
         /* Header & Navigation */
         .navbar {
@@ -147,7 +165,7 @@
             width: 100%;
             height: 100%;
             background: radial-gradient(circle at center, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
-            opacity: 0.1;
+            opacity: 0.07;
             z-index: -1;
         }
         
@@ -201,6 +219,10 @@
             position: relative;
             overflow: visible;
         }
+
+		.section i {
+  			color: var(--apple-blue);
+		}
         
         .section-header {
             text-align: center;
@@ -222,7 +244,12 @@
             margin: 0 auto;
             opacity: 0;
             transform: translateY(20px);
+			color: #111827; /* sehr dunkles Grau statt Verlauf */
         }
+
+		.dark-mode .section-header h2 {
+  			color: #f3f4f6;
+		}
         
         .dark-mode .section-header p {
             color: #a1a1a6;
@@ -451,6 +478,7 @@
             transform: translateY(40px);
 			display: flex;
 			flex-direction: column;
+			background: #ffffff;
         }
         
         .dark-mode .certificate {
@@ -458,8 +486,8 @@
         }
         
         .certificate:hover {
-            transform: translateY(-10px) scale(1.03);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
         }
         
         .certificate-img {
@@ -1234,6 +1262,7 @@
 </body>
 
 </html>
+
 
 
 
